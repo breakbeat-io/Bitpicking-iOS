@@ -10,21 +10,20 @@ import SwiftUI
 
 struct Home: View {
     
-    @EnvironmentObject var userData: UserData
-    
     @State private var selection = 0
  
     var body: some View {
-        List(0..<userData.bitpickingRSS!.items!.count, id: \.self) { i in
-            HStack{
-                IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesSeason) { season in
-                    Text(String(season))
+        TabView {
+            Podcast()
+                .tabItem {
+                    Image(systemName: "dot.radiowaves.left.and.right")
+                    Text("Podcast")
                 }
-                IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesEpisode) { episode in
-                    Text(String(episode))
+            TV()
+                .tabItem {
+                    Image(systemName: "tv")
+                    Text("Bitpicking TV")
                 }
-                Text(self.userData.bitpickingRSS!.items![i].title!)
-            }
         }
     }
 }
