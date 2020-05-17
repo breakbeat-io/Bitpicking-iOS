@@ -1,5 +1,5 @@
 //
-//  TV.swift
+//  Latest.swift
 //  Bitpicking
 //
 //  Created by Greg Hepworth on 17/05/2020.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct TV: View {
+struct Latest: View {
     var body: some View {
-        Text("Coming soon!")
+        Text("Check out our latest episode!")
     }
 }
 
-struct TV_Previews: PreviewProvider {
+struct Latest_Previews: PreviewProvider {
     static var previews: some View {
-        TV()
+        Latest()
     }
 }

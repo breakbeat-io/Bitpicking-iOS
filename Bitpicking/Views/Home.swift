@@ -14,6 +14,11 @@ struct Home: View {
  
     var body: some View {
         TabView {
+            Latest()
+                .tabItem {
+                    Image(systemName: "pin")
+                    Text("Latest")
+                }
             Podcast()
                 .tabItem {
                     Image(systemName: "dot.radiowaves.left.and.right")

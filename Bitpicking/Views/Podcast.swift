@@ -19,14 +19,7 @@ struct Podcast: View {
                     ForEach(0..<userData.bitpickingRSS!.items!.count, id: \.self) { i in
                         Group {
                             if (self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesSeason == 2) {
-                                NavigationLink(destination: Episode()) {
-                                    HStack{
-                                        IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesEpisode) { episode in
-                                            Text(String(episode))
-                                        }
-                                        Text(self.userData.bitpickingRSS!.items![i].title!)
-                                    }
-                                }
+                                EpisodeCard(episodeId: self.userData.bitpickingRSS!.items![i].guid!.value!)
                             }
                         }
                     }
@@ -35,18 +28,14 @@ struct Podcast: View {
                     ForEach(0..<userData.bitpickingRSS!.items!.count, id: \.self) { i in
                         Group {
                             if (self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesSeason == 1) {
-                                NavigationLink(destination: Episode()) {
-                                    HStack{
-                                        IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesEpisode) { episode in
-                                            Text(String(episode))
-                                        }
-                                        Text(self.userData.bitpickingRSS!.items![i].title!)
-                                    }
-                                }
+                                EpisodeCard(episodeId: self.userData.bitpickingRSS!.items![i].guid!.value!)
                             }
                         }
                     }
                 }
+            }
+            .onAppear {
+                UITableView.appearance().separatorStyle = .none
             }
             .navigationBarTitle("Episodes")
         }

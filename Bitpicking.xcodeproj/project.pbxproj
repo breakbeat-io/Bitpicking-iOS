@@ -18,6 +18,9 @@
 		D2B5691D247162AA00B97516 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5691C247162AA00B97516 /* Podcast.swift */; };
 		D2B5691F247162B200B97516 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5691E247162B200B97516 /* TV.swift */; };
 		D2B569212471645600B97516 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B569202471645600B97516 /* Episode.swift */; };
+		D2B5692324717CE000B97516 /* Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5692224717CE000B97516 /* Latest.swift */; };
+		D2B5692524717D5400B97516 /* EpisodeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5692424717D5400B97516 /* EpisodeCard.swift */; };
+		D2B56928247183A900B97516 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D2B56927247183A900B97516 /* KingfisherSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,8 @@
 		D2B5691C247162AA00B97516 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		D2B5691E247162B200B97516 /* TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
 		D2B569202471645600B97516 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		D2B5692224717CE000B97516 /* Latest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Latest.swift; sourceTree = "<group>"; };
+		D2B5692424717D5400B97516 /* EpisodeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B56928247183A900B97516 /* KingfisherSwiftUI in Frameworks */,
 				D28EA2162470654700176E26 /* FeedKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,8 +97,10 @@
 			children = (
 				D28EA2042470650300176E26 /* Home.swift */,
 				D2B5691C247162AA00B97516 /* Podcast.swift */,
-				D2B5691E247162B200B97516 /* TV.swift */,
+				D2B5692424717D5400B97516 /* EpisodeCard.swift */,
 				D2B569202471645600B97516 /* Episode.swift */,
+				D2B5691E247162B200B97516 /* TV.swift */,
+				D2B5692224717CE000B97516 /* Latest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			name = Bitpicking;
 			packageProductDependencies = (
 				D28EA2152470654700176E26 /* FeedKit */,
+				D2B56927247183A900B97516 /* KingfisherSwiftUI */,
 			);
 			productName = Bitpicking;
 			productReference = D28EA1FD2470650300176E26 /* Bitpicking.app */;
@@ -146,6 +155,7 @@
 			mainGroup = D28EA1F42470650300176E26;
 			packageReferences = (
 				D28EA2142470654700176E26 /* XCRemoteSwiftPackageReference "FeedKit" */,
+				D2B56926247183A900B97516 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D28EA1FE2470650300176E26 /* Products */;
 			projectDirPath = "";
@@ -178,8 +188,10 @@
 				D28EA2032470650300176E26 /* SceneDelegate.swift in Sources */,
 				D2B569212471645600B97516 /* Episode.swift in Sources */,
 				D28EA2182470657100176E26 /* UserData.swift in Sources */,
+				D2B5692324717CE000B97516 /* Latest.swift in Sources */,
 				D28EA2052470650300176E26 /* Home.swift in Sources */,
 				D2B5691D247162AA00B97516 /* Podcast.swift in Sources */,
+				D2B5692524717D5400B97516 /* EpisodeCard.swift in Sources */,
 				D2B5691F247162B200B97516 /* TV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +396,14 @@
 				minimumVersion = 9.1.2;
 			};
 		};
+		D2B56926247183A900B97516 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -391,6 +411,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D28EA2142470654700176E26 /* XCRemoteSwiftPackageReference "FeedKit" */;
 			productName = FeedKit;
+		};
+		D2B56927247183A900B97516 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2B56926247183A900B97516 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
