@@ -14,21 +14,41 @@ struct Podcast: View {
     
     var body: some View {
         NavigationView {
-            List(0..<userData.bitpickingRSS!.items!.count, id: \.self) { i in
-                NavigationLink(destination: Episode()) {
-                    HStack{
-                        IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesSeason) { season in
-                            Text(String(season))
+            List {
+                Section(header: Text("Season 2")) {
+                    ForEach(0..<userData.bitpickingRSS!.items!.count, id: \.self) { i in
+                        Group {
+                            if (self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesSeason == 2) {
+                                NavigationLink(destination: Episode()) {
+                                    HStack{
+                                        IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesEpisode) { episode in
+                                            Text(String(episode))
+                                        }
+                                        Text(self.userData.bitpickingRSS!.items![i].title!)
+                                    }
+                                }
+                            }
                         }
-                        IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesEpisode) { episode in
-                            Text(String(episode))
-                        }
-                        Text(self.userData.bitpickingRSS!.items![i].title!)
                     }
                 }
-                
+                Section(header: Text("Season 1")) {
+                    ForEach(0..<userData.bitpickingRSS!.items!.count, id: \.self) { i in
+                        Group {
+                            if (self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesSeason == 1) {
+                                NavigationLink(destination: Episode()) {
+                                    HStack{
+                                        IfLet(self.userData.bitpickingRSS?.items?[i].iTunes?.iTunesEpisode) { episode in
+                                            Text(String(episode))
+                                        }
+                                        Text(self.userData.bitpickingRSS!.items![i].title!)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            .navigationBarTitle("Podcast Episodes")
+            .navigationBarTitle("Episodes")
         }
         
     }
