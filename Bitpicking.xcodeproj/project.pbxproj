@@ -3,27 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D28EA2012470650300176E26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EA2002470650300176E26 /* AppDelegate.swift */; };
 		D28EA2032470650300176E26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EA2022470650300176E26 /* SceneDelegate.swift */; };
-		D28EA2052470650300176E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EA2042470650300176E26 /* ContentView.swift */; };
+		D28EA2052470650300176E26 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EA2042470650300176E26 /* Home.swift */; };
 		D28EA2072470650400176E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28EA2062470650400176E26 /* Assets.xcassets */; };
 		D28EA20A2470650400176E26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28EA2092470650400176E26 /* Preview Assets.xcassets */; };
 		D28EA20D2470650400176E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28EA20B2470650400176E26 /* LaunchScreen.storyboard */; };
+		D28EA2162470654700176E26 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = D28EA2152470654700176E26 /* FeedKit */; };
+		D28EA2182470657100176E26 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28EA2172470657100176E26 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D28EA1FD2470650300176E26 /* Bitpicking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitpicking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28EA2002470650300176E26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28EA2022470650300176E26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D28EA2042470650300176E26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D28EA2042470650300176E26 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D28EA2062470650400176E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D28EA2092470650400176E26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D28EA20C2470650400176E26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D28EA20E2470650400176E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D28EA2172470657100176E26 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D28EA2162470654700176E26 /* FeedKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +62,8 @@
 			children = (
 				D28EA2002470650300176E26 /* AppDelegate.swift */,
 				D28EA2022470650300176E26 /* SceneDelegate.swift */,
-				D28EA2042470650300176E26 /* ContentView.swift */,
+				D28EA2172470657100176E26 /* UserData.swift */,
+				D28EA2042470650300176E26 /* Home.swift */,
 				D28EA2062470650400176E26 /* Assets.xcassets */,
 				D28EA20B2470650400176E26 /* LaunchScreen.storyboard */,
 				D28EA20E2470650400176E26 /* Info.plist */,
@@ -91,6 +96,9 @@
 			dependencies = (
 			);
 			name = Bitpicking;
+			packageProductDependencies = (
+				D28EA2152470654700176E26 /* FeedKit */,
+			);
 			productName = Bitpicking;
 			productReference = D28EA1FD2470650300176E26 /* Bitpicking.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +127,9 @@
 				Base,
 			);
 			mainGroup = D28EA1F42470650300176E26;
+			packageReferences = (
+				D28EA2142470654700176E26 /* XCRemoteSwiftPackageReference "FeedKit" */,
+			);
 			productRefGroup = D28EA1FE2470650300176E26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,7 +159,8 @@
 			files = (
 				D28EA2012470650300176E26 /* AppDelegate.swift in Sources */,
 				D28EA2032470650300176E26 /* SceneDelegate.swift in Sources */,
-				D28EA2052470650300176E26 /* ContentView.swift in Sources */,
+				D28EA2182470657100176E26 /* UserData.swift in Sources */,
+				D28EA2052470650300176E26 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D28EA2142470654700176E26 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D28EA2152470654700176E26 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D28EA2142470654700176E26 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D28EA1F52470650300176E26 /* Project object */;
 }
