@@ -47,7 +47,7 @@ struct EpisodeCard: View {
                     self.tapped = 1
                 }
                 NavigationLink(
-                    destination: Episode(),
+                    destination: Episode(episodeId: episodeId),
                     tag: 1,
                     selection: self.$tapped
                 ){
