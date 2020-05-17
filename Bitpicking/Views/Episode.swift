@@ -19,8 +19,6 @@ struct Episode: View {
         let episode = userData.bitpickingRSS?.items?.first(where: { $0.guid!.value == episodeId })
         let episodeNumber = episode?.iTunes?.iTunesEpisode
         let episodeSeason = episode?.iTunes?.iTunesSeason
-        
-        let data = Data(episode!.description!.utf8)
 
         let episodeView =
             

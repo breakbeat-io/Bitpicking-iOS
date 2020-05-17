@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct Latest: View {
+    
+    @EnvironmentObject var userData: UserData
+    
     var body: some View {
-        Text("Check out our latest episode!")
+        
+        let episode = userData.bitpickingRSS?.items![0]
+        let latestView =
+            VStack(alignment: .leading) {
+                Text("The Bitpicking Podcast")
+                    .font(.largeTitle)
+                    .padding()
+                Text("Latest Episode")
+                    .font(.title)
+                    .padding()
+                Episode(episodeId: (episode?.guid?.value)!)
+        }
+        
+        return latestView
     }
 }
 
